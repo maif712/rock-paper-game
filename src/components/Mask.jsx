@@ -1,7 +1,11 @@
+import { useAppContext } from "../AppContext"
 
 
 export default function Mask() {
+
+    const {isRules} = useAppContext()
+
     return (
-        <div id="mask" data-visible="false"></div>
+        <div id="mask" data-visible={isRules}></div>
     )
 }
